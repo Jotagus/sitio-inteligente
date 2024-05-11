@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEST</title>
+    <script src="sumarRespuestas.js"></script>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body style="background-image: url('file:///C:/Users/Usuario/Desktop/IA/img/cuest2.jpg'); background-repeat: repeat; background-size: cover;">
+    
+    <button onclick="iniciarTest()">Inicio</button>
+    <script>
+        function iniciarTest() {
+            // Redireccionar a pagina de inicio.
+            window.location.href = "file:///C:/Users/Usuario/Desktop/IA/index.html";
+        }
+    </script>
+    <form id="quiz-form">
+    
+    <h1>TEST DE INTELIGENCIAS MULTIPLES</h1>
+
+        <!-- Pregunta 1 -->
+        <div id="question1" class="question">
+            <label for="q1">1. Prefiero hacer un mapa que explicarle a alguien como tiene que llegar.</label><br>
+            <select id="q1" name="q1">
+                <option value="1">Verdadero</option>
+                <option value="0">Falso</option>
+            </select>
+            <button type="button" onclick="nextQuestion('question1', 'question2')">SIGUIENTE</button>
+        </div>
+        <!-- Pregunta 2 -->
+        <div id="question2" class="question" style="display: none;">
+            <label for="q2">2. Si estoy enojado(a) o contento (a) generalmente sé exactamente por qué.</label><br>
+            <select id="q2" name="q2">
+                <option value="1">Verdadero</option>
+                <option value="0">Falso</option>
+            </select>
+            <button type="button" onclick="previousQuestion('question2', 'question1')">ANTERIOR</button>
+            <button type="button" onclick="nextQuestion('question2', 'question3')">SIGUIENTE</button>
+        </div>
+        <!-- Pregunta 3 -->
+        <div id="question3" class="question" style="display: none;">
+            <label for="q3">3. Sé tocar (o antes sabía tocar) un instrumento musical.</label><br>
+            <select id="q3" name="q3">
+                <option value="1">Verdadero</option>
+                <option value="0">Falso</option>
+            </select>
+            <button type="button" onclick="previousQuestion('question3', 'question2')">ANTERIOR</button>
+            <button type="button" onclick="nextQuestion('question3', 'question4')">SIGUIENTE</button>
+        </div>
+        <!-- Pregunta 4 -->
+        <div id="question4" class="question" style="display: none;">
+            <label for="q4">4. Asocio la música con mis estados de ánimo.</label><br>
+            <select id="q4" name="q4">
+                <option value="1">Verdadero</option>
+                <option value="0">Falso</option>
+            </select>
+            <button type="button" onclick="previousQuestion('question4', 'question3')">ANTERIOR</button>
+            <button type="button" onclick="nextQuestion('question4', 'question5')">SIGUIENTE</button>
+        </div>
+        <!-- Pregunta 5 -->
+        <div id="question5" class="question" style="display: none;">
+            <label for="q5">5. Puedo sumar o multiplicar mentalmente con mucha rapidez.</label><br>
+            <select id="q5" name="q5">
+                <option value="1">Verdadero</option>
+                <option value="0">Falso</option>
+            </select>
+            <button type="button" onclick="previousQuestion('question5', 'question4')">ANTERIOR</button>
+            <button type="button" onclick="nextQuestion('question5', 'question6')">SIGUIENTE</button>
+        </div>
+        <!-- Pregunta 6 -->
+        <div id="question6" class="question" style="display: none;">
+            <label for="q6">6. Puedo ayudar a un amigo a manejar sus sentimientos porque yo lo pude hacer antes en relación a sentimientos parecidos.</label><br>
+            <select id="q6" name="q6">
+                <option value="1">Verdadero</option>
+                <option value="0">Falso</option>
+            </select>
+            <button type="button" onclick="previousQuestion('question6', 'question5')">ANTERIOR</button>
+            <button type="button" onclick="nextQuestion('question6', 'question7')">SIGUIENTE</button>
+        </div>
+        <!-- Pregunta 7 -->
+        <div id="question7" class="question" style="display: none;">
+            <label for="q7">7. Me gusta trabajar con calculadoras y computadores.</label><br>
+            <select id="q7" name="q7">
+                <option value="1">Verdadero</option>
+                <option value="0">Falso</option>
+            </select>
+            <button type="button" onclick="previousQuestion('question7', 'question6')">ANTERIOR</button>
+            <button type="button" onclick="nextQuestion('question7', 'question8')">SIGUIENTE</button>
+        </div>
+        <!-- Pregunta 8 -->
+        <div id="question8" class="question" style="display: none;">
+            <label for="q8">8. Aprendo rápido a bailar un ritmo nuevo.</label><br>
+            <select id="q8" name="q8">
+                <option value="1">Verdadero</option>
+                <option value="0">Falso</option>
+            </select>
+            <button type="button" onclick="previousQuestion('question8', 'question7')">ANTERIOR</button>
+            <button type="button" onclick="nextQuestion('question8', 'question9')">SIGUIENTE</button>
+        </div>
+        <!-- Pregunta 9 -->
+        <div id="question9" class="question" style="display: none;">
+            <label for="q9">9. No me es difícil decir lo que pienso en el curso de una discusión o debate.</label><br>
+            <select id="q9" name="q9">
+                <option value="1">Verdadero</option>
+                <option value="0">Falso</option>
+            </select>
+            <button type="button" onclick="previousQuestion('question9', 'question8')">ANTERIOR</button>
+            <button type="button" onclick="nextQuestion('question9', 'question10')">SIGUIENTE</button>
+        </div>
+        <!-- Pregunta 10 -->
+        <div id="question10" class="question" style="display: none;">
+            <label for="q10">10. Disfruto de una buena charla, discurso o sermón.</label><br>
+            <select id="q10" name="q10">
+                <option value="1">Verdadero</option>
+                <option value="0">Falso</option>
+            </select>
+            <button type="button" onclick="previousQuestion('question10', 'question9')">ANTERIOR</button>
+            <button type="button" onclick="nextQuestion('question10', 'question11')">SIGUIENTE</button>
+        </div>
+        <!-- Pregunta 11 -->
+        <div id="question11" class="question" style="display: none;">
+            <label for="q11">11. Siempre distingo el norte del sur, esté donde esté.</label><br>
+            <select id="q11" name="q11">
+                <option value="1">Verdadero</option>
+                <option value="0">Falso</option>
+            </select>
+            <button type="button" onclick="previousQuestion('question11', 'question10')">ANTERIOR</button>
+            <button type="button" onclick="nextQuestion('question11', 'question12')">SIGUIENTE</button>
+        </div>
+        <!-- Pregunta 12 -->
+        <div id="question12" class="question" style="display: none;">
+            <label for="q12">12. Me gusta reunir grupos de personas en una fiesta o en un evento especial.</label><br>
+            <select id="q12" name="q12">
+                <option value="1">Verdadero</option>
+                <option value="0">Falso</option>
+            </select>
+            <button type="button" onclick="previousQuestion('question12', 'question11')">ANTERIOR</button>
+            <button type="button" onclick="nextQuestion('question12', 'question13')">SIGUIENTE</button>
+        </div>
+        <!-- Pregunta 13 -->
+        <div id="question13" class="question" style="display: none;">
+            <label for="q13">13. La vida me parece vacía sin música.</label><br>
+            <select id="q13" name="q13">
+                <option value="1">Verdadero</option>
+                <option value="0">Falso</option>
+            </select>
+            <button type="button" onclick="previousQuestion('question13', 'question12')">ANTERIOR</button>
+            <button type="button" onclick="nextQuestion('question13', 'question14')">SIGUIENTE</button>
+        </div>
+        <!-- Pregunta 14 -->
+        <div id="question14" class="question" style="display: none;">
+            <label for="q14">14. Siempre entiendo los gráficos que vienen en las instrucciones de equipos o instrumentos.</label><br>
+            <select id="q14" name="q14">
+                <option value="1">Verdadero</option>
+                <option value="0">Falso</option>
+            </select>
+            <button type="button" onclick="previousQuestion('question14', 'question13')">ANTERIOR</button>
+            <button type="button" onclick="nextQuestion('question14', 'question15')">SIGUIENTE</button>
+        </div>
+        <!-- Pregunta 15 -->
+        <div id="question15" class="question" style="display: none;">
+            <label for="q15">15. Me gusta hacer rompecabezas y entretenerme con juegos electrónicos.</label><br>
+            <select id="q15" name="q15">
+                <option value="1">Verdadero</option>
+                <option value="0">Falso</option>
+            </select>
+            <button type="button" onclick="previousQuestion('question15', 'question14')">ANTERIOR</button>
+            <button type="button" onclick="nextQuestion('question15', 'question16')">SIGUIENTE</button>
+        </div>
+        <!-- Pregunta 16 -->
+        <div id="question16" class="question" style="display: none;">
+            <label for="q16">16. Me fue fácil aprender a andar en bicicleta (o patines).</label><br>
+            <select id="q16" name="q16">
+                <option value="1">Verdadero</option>
+                <option value="0">Falso</option>
+            </select>
+            <button type="button" onclick="previousQuestion('question16', 'question15')">ANTERIOR</button>
+            <button type="button" onclick="nextQuestion('question16', 'question17')">SIGUIENTE</button>
+        </div>
+        <!-- Pregunta 17 -->
+        <div id="question17" class="question" style="display: none;">
+            <label for="q17">17. Me enojo cuando oigo una discusión o una afirmación que parece ilógica.</label><br>
+            <select id="q17" name="q17">
+                <option value="1">Verdadero</option>
+                <option value="0">Falso</option>
+            </select>
+            <button type="button" onclick="previousQuestion('question17', 'question16')">ANTERIOR</button>
+            <button type="button" onclick="nextQuestion('question17', 'question18')">SIGUIENTE</button>
+        </div>
+        <!-- Pregunta 18 -->
+        <div id="question18" class="question" style="display: none;">
+            <label for="q18">18. Soy capaz de convencer a otros que sigan mis planes.</label><br>
+            <select id="q18" name="q18">
+                <option value="1">Verdadero</option>
+                <option value="0">Falso</option>
+            </select>
+            <button type="button" onclick="previousQuestion('question18', 'question17')">ANTERIOR</button>
+            <button type="button" onclick="nextQuestion('question18', 'question19')">SIGUIENTE</button>
+        </div>
+        <!-- Pregunta 19 -->
+        <div id="question19" class="question" style="display: none;">
+            <label for="q19">19. Tengo buen sentido de equilibrio y coordinación.</label><br>
+            <select id="q19" name="q19">
+                <option value="1">Verdadero</option>
+                <option value="0">Falso</option>
+            </select>
+            <button type="button" onclick="previousQuestion('question19', 'question18')">ANTERIOR</button>
+            <button type="button" onclick="nextQuestion('question19', 'question20')">SIGUIENTE</button>
+        </div>
+        <!-- Pregunta 20 -->
+        <div id="question20" class="question" style="display: none;">
+            <label for="q20">20. Con frecuencia veo configuraciones y relaciones entre números con más rapidez y facilidad que otros.</label><br>
+            <select id="q20" name="q20">
+                <option value="1">Verdadero</option>
+                <option value="0">Falso</option>
+            </select>
+            <button type="button" onclick="previousQuestion('question20', 'question19')">ANTERIOR</button>
+            <button type="button" onclick="nextQuestion('question20', 'question21')">SIGUIENTE</button>
+        </div>
+        <!-- Pregunta 21 -->
+        <div id="question21" class="question" style="display: none;">
+            <label for="q21">21. Me gusta construir modelos (o hacer esculturas).</label><br>
+            <select id="q21" name="q21">
+                <option value="1">Verdadero</option>
+                <option value="0">Falso</option>
+            </select>
+            <button type="button" onclick="previousQuestion('question21', 'question20')">ANTERIOR</button>
+            <button type="button" onclick="nextQuestion('question21', 'question22')">SIGUIENTE</button>
+        </div>
+        <!-- Pregunta 22 -->
+        <div id="question22" class="question" style="display: none;">
+            <label for="q22">22. Tengo agudeza para encontrar el significado de las palabras.</label><br>
+            <select id="q22" name="q22">
+                <option value="1">Verdadero</option>
+                <option value="0">Falso</option>
+            </select>
+            <button type="button" onclick="previousQuestion('question22', 'question21')">ANTERIOR</button>
+            <button type="button" onclick="nextQuestion('question22', 'question23')">SIGUIENTE</button>
+        </div>
+        <!-- Pregunta 23 -->
+        <div id="question23" class="question" style="display: none;">
+            <label for="q23">23. Puedo mirar un objeto de una manera y con la misma facilidad verlo.</label><br>
+            <select id="q23" name="q23">
+                <option value="1">Verdadero</option>
+                <option value="0">Falso</option>
+            </select>
+            <button type="button" onclick="previousQuestion('question23', 'question22')">ANTERIOR</button>
+            <button type="button" onclick="nextQuestion('question23', 'question24')">SIGUIENTE</button>
+        </div>
+        <!-- Pregunta 24 -->
+        <div id="question24" class="question" style="display: none;">
+            <label for="q24">24. Con frecuencia hago la conexión entre una pieza de música y algún evento de mi vida.</label><br>
+            <select id="q24" name="q24">
+                <option value="1">Verdadero</option>
+                <option value="0">Falso</option>
+            </select>
+            <button type="button" onclick="previousQuestion('question24', 'question23')">ANTERIOR</button>
+            <button type="button" onclick="nextQuestion('question24', 'question25')">SIGUIENTE</button>
+        </div>
+        <!-- Pregunta 25 -->
+        <div id="question25" class="question" style="display: none;">
+            <label for="q25">25. Me gusta trabajar con números y figuras.</label><br>
+            <select id="q25" name="q25">
+                <option value="1">Verdadero</option>
+                <option value="0">Falso</option>
+            </select>
+            <button type="button" onclick="previousQuestion('question25', 'question24')">ANTERIOR</button>
+            <button type="button" onclick="nextQuestion('question25', 'question26')">SIGUIENTE</button>
+        </div>
+        <!-- Pregunta 26 -->
+        <div id="question26" class="question" style="display: none;">
+            <label for="q26">26. Me gusta sentarme silenciosamente y reflexionar sobre mis sentimientos íntimos.</label><br>
+            <select id="q26" name="q26">
+                <option value="1">Verdadero</option>
+                <option value="0">Falso</option>
+            </select>
+            <button type="button" onclick="previousQuestion('question26', 'question25')">ANTERIOR</button>
+            <button type="button" onclick="nextQuestion('question26', 'question27')">SIGUIENTE</button>
+        </div>
+        <!-- Pregunta 27 -->
+        <div id="question27" class="question" style="display: none;">
+            <label for="q27">27. Con sólo mirar la forma de construcciones y estructuras me siento a gusto.</label><br>
+            <select id="q27" name="q27">
+                <option value="1">Verdadero</option>
+                <option value="0">Falso</option>
+            </select>
+            <button type="button" onclick="previousQuestion('question27', 'question26')">ANTERIOR</button>
+            <button type="button" onclick="nextQuestion('question27', 'question28')">SIGUIENTE</button>
+        </div>
+        <!-- Pregunta 28 -->
+        <div id="question28" class="question" style="display: none;">
+            <label for="q28">28. Me gusta tararear, silbar y cantar en la ducha o cuando estoy sola.</label><br>
+            <select id="q28" name="q28">
+                <option value="1">Verdadero</option>
+                <option value="0">Falso</option>
+            </select>
+            <button type="button" onclick="previousQuestion('question28', 'question27')">ANTERIOR</button>
+            <button type="button" onclick="nextQuestion('question28', 'question29')">SIGUIENTE</button>
+        </div>
+        <!-- Pregunta 29 -->
+        <div id="question29" class="question" style="display: none;">
+            <label for="q29">29. Soy bueno(a) para el atletismo.</label><br>
+            <select id="q29" name="q29">
+                <option value="1">Verdadero</option>
+                <option value="0">Falso</option>
+            </select>
+            <button type="button" onclick="previousQuestion('question29', 'question28')">ANTERIOR</button>
+            <button type="button" onclick="nextQuestion('question29', 'question30')">SIGUIENTE</button>
+        </div>
+        <!-- Pregunta 30 -->
+        <div id="question30" class="question" style="display: none;">
+            <label for="q30">30. Me gusta escribir cartas detalladas a mis amigos.</label><br>
+            <select id="q30" name="q30">
+                <option value="1">Verdadero</option>
+                <option value="0">Falso</option>
+            </select>
+            <button type="button" onclick="previousQuestion('question30', 'question29')">ANTERIOR</button>
+            <button type="button" onclick="nextQuestion('question30', 'question31')">SIGUIENTE</button>
+        </div>
+        <!-- Pregunta 31 -->
+        <div id="question31" class="question" style="display: none;">
+            <label for="q31">31. Generalmente me doy cuenta de la expresión que tengo en la cara.</label><br>
+            <select id="q31" name="q31">
+                <option value="1">Verdadero</option>
+                <option value="0">Falso</option>
+            </select>
+            <button type="button" onclick="previousQuestion('question31', 'question30')">ANTERIOR</button>
+            <button type="button" onclick="nextQuestion('question31', 'question32')">SIGUIENTE</button>
+        </div>
+        <!-- Pregunta 32 -->
+        <div id="question32" class="question" style="display: none;">
+            <label for="q32">32. Me doy cuenta de las expresiones en la cara de otras personas.</label><br>
+            <select id="q32" name="q32">
+                <option value="1">Verdadero</option>
+                <option value="0">Falso</option>
+            </select>
+            <button type="button" onclick="previousQuestion('question32', 'question31')">ANTERIOR</button>
+            <button type="button" onclick="nextQuestion('question32', 'question33')">SIGUIENTE</button>
+        </div>
+        <!-- Pregunta 33 -->
+        <div id="question33" class="question" style="display: none;">
+            <label for="q33">33. Me mantengo "en contacto" con mis estados de ánimo. No me cuesta identificarlos.</label><br>
+            <select id="q33" name="q33">
+                <option value="1">Verdadero</option>
+                <option value="0">Falso</option>
+            </select>
+            <button type="button" onclick="previousQuestion('question33', 'question32')">ANTERIOR</button>
+            <button type="button" onclick="nextQuestion('question33', 'question34')">SIGUIENTE</button>
+        </div>
+        <!-- Pregunta 34 -->
+        <div id="question34" class="question" style="display: none;">
+            <label for="q34">34. Me doy cuenta de los estados de ánimo de otros.</label><br>
+            <select id="q34" name="q34">
+                <option value="1">Verdadero</option>
+                <option value="0">Falso</option>
+            </select>
+            <button type="button" onclick="previousQuestion('question34', 'question33')">ANTERIOR</button>
+            <button type="button" onclick="nextQuestion('question34', 'question35')">SIGUIENTE</button>
+        </div>
+        <!-- Pregunta 35 -->
+        <div id="question35" class="question" style="display: none;">
+            <label for="q35">35. Me doy cuenta bastante bien de lo que otros piensan de mí.</label><br>
+            <select id="q35" name="q35">
+                <option value="1">Verdadero</option>
+                <option value="0">Falso</option>
+            </select>
+            <button type="button" onclick="previousQuestion('question35', 'question34')">ANTERIOR</button>
+            <button type="button" onclick="nextQuestion('question35', 'question36')">SIGUIENTE</button>
+        </div>
+    </form>
+
+    <!-- Botón para mostrar el grupo con la suma más grande -->
+    <button onclick="mostrarGrupoMayor()">Mostrar resultado</button>
+
+    <!-- Div para mostrar el resultado -->
+    <div id="resultado"></div>
+    <!-- Script adicional para mostrar el grupo con la suma más grande -->
+    <script>
+        function mostrarGrupoMayor() {
+            // Llama a la función para comparar las sumas de los grupos
+            const grupoMayor = encontrarGrupoMayor();
+            // Muestra el mensaje según el grupo con la suma más grande
+            const resultadoDiv = document.getElementById('resultado');
+            resultadoDiv.innerHTML = '';
+            const mensaje = document.createElement('p');
+            switch (grupoMayor) {
+                case 'A':
+                    mensaje.textContent = 'Posees Inteligencia Verbal';
+                    break;
+                case 'B':
+                    mensaje.textContent = 'Posees Inteligencia Lógico-Matemático';
+                    break;
+                case 'C':
+                    mensaje.textContent = 'Posees Inteligencia Visual Espacial';
+                    break;
+                case 'D':
+                    mensaje.textContent = 'Posees Inteligencia Kinestesica-Corporal';
+                    break;
+                case 'E':
+                    mensaje.textContent = 'Posees Inteligencia Musical-Rítmica';
+                    break;
+                case 'F':
+                    mensaje.textContent = 'Posees Inteligencia Intrapersonal';
+                    break;
+                case 'G':
+                    mensaje.textContent = 'Posees Inteligencia Interpersonal';
+                    break;
+                default:
+                    mensaje.textContent = 'No se pudo determinar el grupo mayor';
+            }
+            resultadoDiv.appendChild(mensaje);
+        }
+    </script>
+
+    <!-- Script para controlar la navegación entre preguntas -->
+    <script>
+        function nextQuestion(currentQuestionId, nextQuestionId) {
+            var currentQuestion = document.getElementById(currentQuestionId);
+            var nextQuestion = document.getElementById(nextQuestionId);
+            currentQuestion.style.display = "none";
+            nextQuestion.style.display = "block";
+            if (nextQuestionId === 'question35') {
+                document.getElementById('submit-button').style.display = 'block';
+            }
+        }
+        function previousQuestion(currentQuestionId, previousQuestionId) {
+            var currentQuestion = document.getElementById(currentQuestionId);
+            var previousQuestion = document.getElementById(previousQuestionId);
+            currentQuestion.style.display = "none";
+            previousQuestion.style.display = "block";
+        }
+    </script>
+</body>
+</html>

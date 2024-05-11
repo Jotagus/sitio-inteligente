@@ -1,0 +1,109 @@
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+body {
+  position: center;
+  animation: fadeIn 2s ease-in-out forwards;
+  font-family: OCR A Extended, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #0117c2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+  line-height: 3;
+}
+
+.container {
+  position: center;
+  max-width: 600px;
+  width: 100%;
+  padding: 20px;
+}
+
+h1 {
+  line-height: 3;
+  position: center;
+  font-family: Britannic Bold, sans-serif;
+  font-size: 40px; /* Aumentar el tamaño de la fuente */
+  text-align: center;
+  color: #ffffff;
+  margin-top: 1px;
+  text-shadow:
+      2px 2px 5px rgba(6, 193, 250, 2), /* Resplandor interno */
+      -2px -2px 5px rgba(254, 5, 5, 2); /* Sombra externa */
+}
+
+p {
+  animation: fadeIn 2s ease-in-out forwards;
+  font-family: 'OCR A Extended', Times, serif;
+  text-align: center;
+  font-size: 30px;
+  line-height: 2;
+  margin-bottom: 20px;/* Aumentar el tamaño de la fuente */
+  color: #ffffff; /* Light gray text */
+  text-shadow:
+      -2px -2px 5px rgba(100, 55, 25, 2); /* Sombra externa */
+}
+
+.question {
+  position: center;
+  animation: fadeIn 2s ease-in-out forwards;
+  color: #00bfff;
+  font-family: Eras Bold ITC, sans-serif;
+  font-size: 20px; /* Aumentar el tamaño de la fuente */
+  margin-bottom: 20px;
+  background-color: #0000ff1f;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0,2,2,2.1);
+  text-shadow:
+  2px 2px 5px rgba(0, 0, 0, 2), /* Resplandor interno */
+  2px 2px 5px rgba(0, 0, 0, 2); /* Sombra externa */
+}
+
+label {
+  position: center;
+  font-weight: bold;
+}
+
+select {
+  position: center;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  border: none;
+  background-color: #12f16054;
+  width: 20%;
+  padding: 10px 20px;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  border: 1px solid #00ff15;
+  border-radius: 15px;
+}
+
+.submit-button{
+  position: center;
+}
+
+button {
+  position: center;
+  padding: 10px 30px;
+  background-color: #11f3152c;
+  color: #ffffff;
+  border:outset;
+  border-radius: 15px;
+  cursor: pointer;
+  display:block;
+  margin: 0 auto;  /* Can be removed if you don't want vertical margin */
+  float: center;
+}
+
+button:hover {
+  position: center;
+  background-color: #030bee;
+}
